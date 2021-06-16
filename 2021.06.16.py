@@ -5,7 +5,6 @@ def solution(absolutes, signs):
             number.append(absolutes[i]*-1)
         else:
             number.append(absolutes[i])
-    print(number)
     answer = sum(number)
     return answer
 
