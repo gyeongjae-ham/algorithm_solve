@@ -38,7 +38,16 @@ def solution(numbers):
                 answer.append(numbers[i] + numbers[j])
     return sorted(list(set(answer)))
 
-# 풀이법 2 (모듈을 사용한 풀이)
+# 풀이법 2 (내 풀이 보완법)
+def solution(numbers):
+    answer = []
+    for i in range(len(numbers)):
+        for j in range(i+1, len(numbers)): # i+1부터 돌아가면 1부터 돌아가는 것보다 더 적은 횟수라서 속도 개선
+            if i != j:
+                answer.append(numbers[i] + numbers[j])
+    return sorted(list(set(answer)))
+
+# 풀이법 3 (모듈을 사용한 풀이)
 from itertools import combinations
 def solution(numbers):
     pairs = combinations(numbers, 2)
