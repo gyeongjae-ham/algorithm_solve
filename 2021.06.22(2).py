@@ -41,3 +41,67 @@ def solution(nums):
         if count == 0:
             answer += 1
     return answer
+
+# 풀이법 2(내 풀이 boolean and continue)
+import itertools
+import math
+
+def solution(nums):
+
+    coms = itertools.combinations(nums, 3)
+    sums = []
+    for i in coms:
+        sums.append(sum(i))
+
+    answer = 0
+    for i in sums:
+        is_answer = True
+        for j in range(2, math.ceil(math.sqrt(i))+1):
+            if i % j == 0:
+                is_answer = False
+                continue
+        if is_answer:
+            answer += 1
+    return answer
+
+# 풀이법 3(내 풀이 boolean and break) 
+import itertools
+import math
+
+def solution(nums):
+
+    coms = itertools.combinations(nums, 3)
+    sums = []
+    for i in coms:
+        sums.append(sum(i))
+
+    answer = 0
+    for i in sums:
+        is_answer = True
+        for j in range(2, math.ceil(math.sqrt(i))+1):
+            if i % j == 0:
+                is_answer = False
+                break
+        if is_answer:
+            answer += 1
+    return answer
+
+# 풀이법 4(내 풀이 list comprehension 적용) // 가장 빠른 로직
+import itertools
+import math
+
+def solution(nums):
+
+    coms = itertools.combinations(nums, 3)
+    sums = [sum(i) for i in coms]
+
+    answer = 0
+    for i in sums:
+        is_answer = True
+        for j in range(2, math.ceil(math.sqrt(i))+1):
+            if i % j == 0:
+                is_answer = False
+                break
+        if is_answer:
+            answer += 1
+    return answer
