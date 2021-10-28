@@ -17,20 +17,20 @@
 # 최소 신장 트리 부분
 
 
-def find(x):
-    if x == parent[x]:
+def find(x): # 연결하려는 노드의 부모 노드를 찾기 위한 함수
+    if x == parent[x]: # x값이 이미 부모노드라면 그대로 return
         return x
-    else:
+    else: # 아니라면
         p = find(parent[x])
-        parent[x] = p
+        parent[x] = p # 부모노드일 때까지 재귀적으로 찾기
     return parent[x]
 
-def union(x, y):
+def union(x, y): # 찾은 부모노드끼리 연결해주기
     x = find(x)
     y = find(y)
-    if x != y:
-        parent[y] = x
-        number[x] += number[y]
+    if x != y: # 두 노드가 다를경우
+        parent[y] = x # 연결해 주고
+        number[x] += number[y] # 네트워크의 크기 값을 더해주기
 
 test_case = int(input())
 
@@ -40,11 +40,11 @@ for _ in range(test_case):
     f = int(input())
     for _ in range(f):
         x, y = input().split(' ')
-        if x not in parent:
-            parent[x] = x
-            number[x] = 1
-        if y not in parent:
-            parent[y] = y
-            number[y] = 1
-        union(x, y)
-        print(number[find(x)])
+        if x not in parent: # 부모노드에 없다면
+            parent[x] = x # 추가해주고
+            number[x] = 1 # 네트워크 크기는 자기자신이므로 하나
+        if y not in parent: # 부모노드에 없다면
+            parent[y] = y # 추가해주고
+            number[y] = 1 # 네트워크 크기는 자기자신이므로 하나
+        union(x, y) # 연결해주기
+        print(number[find(x)]) # union이 진행될 때마다 출력해주기(이해가 필요함)
