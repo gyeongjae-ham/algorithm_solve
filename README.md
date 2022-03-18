@@ -1,3 +1,3 @@
 # Algorithm, Data Structure
 
-with python, java or javascript
+with python, c++, javascript
