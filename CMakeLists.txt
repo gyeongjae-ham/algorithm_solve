@@ -4,7 +4,7 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp)
+add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp c++/vector2.cpp)
 
 add_executable(start c++/start.cpp)
 add_executable(type c++/type.cpp)
@@ -23,3 +23,4 @@ add_executable(sort c++/sort.cpp)
 add_executable(pair_sort c++/pair_sort.cpp)
 add_executable(pair_sort2 c++/pair_sort2.cpp)
 add_executable(vector c++/vector.cpp)
+add_executable(vector2 c++/vector2.cpp)
