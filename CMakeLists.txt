@@ -4,7 +4,7 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp c++/vector2.cpp c++/array.cpp c++/memcpy.cpp c++/multi-demension-array.cpp c++/map.cpp c++/map2.cpp c++/set.cpp c++/multiset.cpp c++/queue.cpp c++/deque.cpp c++/struct.cpp)
+add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp c++/vector2.cpp c++/array.cpp c++/memcpy.cpp c++/multi-demension-array.cpp c++/map.cpp c++/map2.cpp c++/set.cpp c++/multiset.cpp c++/queue.cpp c++/deque.cpp c++/struct.cpp c++/priority-queue.cpp)
 
 add_executable(start c++/start.cpp)
 add_executable(type c++/type.cpp)
@@ -34,3 +34,4 @@ add_executable(multiset c++/multiset.cpp)
 add_executable(queue c++/queue.cpp)
 add_executable(deque c++/deque.cpp)
 add_executable(struct c++/struct.cpp)
+add_executable(priority-queue c++/priority-queue.cpp)
