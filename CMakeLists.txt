@@ -4,7 +4,7 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp c++/vector2.cpp c++/array.cpp c++/memcpy.cpp c++/multi-demension-array.cpp c++/map.cpp)
+add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp c++/vector2.cpp c++/array.cpp c++/memcpy.cpp c++/multi-demension-array.cpp c++/map.cpp c++/map2.cpp)
 
 add_executable(start c++/start.cpp)
 add_executable(type c++/type.cpp)
@@ -28,3 +28,4 @@ add_executable(array c++/array.cpp)
 add_executable(memcpy c++/memcpy.cpp)
 add_executable(multi-demension-array c++/multi-demension-array.cpp)
 add_executable(map c++/map.cpp)
+add_executable(map2 c++/map2.cpp)
