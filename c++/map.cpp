@@ -19,9 +19,11 @@ int main() {
 
 
     // map의 find 메소드는 찾지 못하면 end() 이터레이터를 반환한다
-    auto search = umap.find("test1");
+    auto search = umap.find("test1"); // search에는 포인터가 담긴다
     if (search != umap.end()) {
-        cout << "found :" << search->first << " " << (*search).second << '\n';
+        // pointer에서 값을 빼는 첫번째 방법 (pointer_name) -> (객체에서 빼내려는 변수명)
+        // pointer에서 값을 빼는 두번째 방법 (*pointer).(빼내려는 변수명)
+        cout << "found :" << search->first  << " " << (*search).second << '\n';
     } else {
         cout << "not found.." << "\n";
     }
