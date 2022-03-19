@@ -4,7 +4,7 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp c++/vector2.cpp c++/array.cpp c++/memcpy.cpp c++/multi-demension-array.cpp c++/map.cpp c++/map2.cpp c++/set.cpp c++/multiset.cpp c++/queue.cpp c++/deque.cpp c++/struct.cpp c++/priority-queue.cpp c++/priority_queue2.cpp c++/pointer.cpp c++/pointer2.cpp c++/call_by_reference.cpp)
+add_executable(untitled c++/start.cpp c++/type.cpp c++/input.cpp c++/getline.cpp c++/float.cpp c++/printf.cpp c++/casting.cpp c++/string.cpp c++/split.cpp c++/pair.cpp c++/pair2.cpp c++/tuple.cpp c++/tuple2.cpp c++/sort.cpp c++/pair_sort.cpp c++/pair_sort2.cpp c++/vector.cpp c++/vector2.cpp c++/array.cpp c++/memcpy.cpp c++/multi-demension-array.cpp c++/map.cpp c++/map2.cpp c++/set.cpp c++/multiset.cpp c++/queue.cpp c++/deque.cpp c++/struct.cpp c++/priority-queue.cpp c++/priority_queue2.cpp c++/pointer.cpp c++/pointer2.cpp c++/call_by_reference.cpp c++/array_and_pointer.cpp)
 
 add_executable(start c++/start.cpp)
 add_executable(type c++/type.cpp)
@@ -39,3 +39,4 @@ add_executable(priority_queue2 c++/priority_queue2.cpp)
 add_executable(pointer c++/pointer.cpp)
 add_executable(pointer2 c++/pointer2.cpp)
 add_executable(call_by_reference c++/call_by_reference.cpp)
+add_executable(array_and_pointer c++/array_and_pointer.cpp)
