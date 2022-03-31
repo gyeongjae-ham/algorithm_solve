@@ -3,6 +3,7 @@ using namespace std;
 int N, a, i, num;
 vector<int> v;
 int main(){
+    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
     cin>>N>>a;
     for(i=0; i<N; i++){
         cin>>num;
