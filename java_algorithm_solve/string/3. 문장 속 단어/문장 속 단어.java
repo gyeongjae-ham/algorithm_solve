@@ -26,7 +26,7 @@ public class Main {
     }
 }
 
-// * indexOf, subString 풀이
+// * indexOf, substring 풀이
 
 import java.util.*;
 
