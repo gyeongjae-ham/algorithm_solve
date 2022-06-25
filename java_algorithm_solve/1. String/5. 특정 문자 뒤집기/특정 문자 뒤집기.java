@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+class Main {
     public static String solution(String str) {
         String answer;
         char[] s = str.toCharArray();
@@ -25,5 +25,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String word = sc.next();
         System.out.print(solution(word));
+        sc.close();
     }
 }

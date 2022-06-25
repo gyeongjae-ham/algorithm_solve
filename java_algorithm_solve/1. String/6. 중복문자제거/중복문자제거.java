@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+class Main {
     public static String solution(String str) {
         String answer = "";
         for (int i=0; i<str.length(); i++) {
@@ -14,5 +14,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String word = sc.next();
         System.out.print(solution(word));
+        sc.close();
     }
 }

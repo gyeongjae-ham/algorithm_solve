@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class Main {
+class Main {
     public static ArrayList<String> solution(int n, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
 
@@ -33,7 +33,7 @@ public class Main {
 
 import java.util.*;
 
-public class Main {
+class Main {
     public static ArrayList<String> solution(int n, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
 
