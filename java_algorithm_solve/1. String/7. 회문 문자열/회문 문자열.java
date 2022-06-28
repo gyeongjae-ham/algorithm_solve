@@ -1,4 +1,4 @@
-// * 펠린드롬 풀기 - 직접 비교
+// * 팰린드롬 풀기 - 직접 비교
 
 import java.util.*;
 
@@ -20,7 +20,7 @@ class Main {
     }
 }
 
-// * 펠린드롬 풀기 - StirngBuilder, equalsIgnoreCase(대소문자 구분없이) 사용
+// * 팰린드롬 풀기 - StirngBuilder, equalsIgnoreCase(대소문자 구분없이) 사용
 
 import java.util.*;
 
