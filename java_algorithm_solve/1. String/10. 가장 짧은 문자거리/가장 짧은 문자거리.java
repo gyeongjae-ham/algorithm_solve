@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class MainString15 {
     public static int[] solution(String s, char t) {
         int[] answer = new int[s.length()];
         int p = 1000;

@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class Main {
+class MainString3 {
     public static String solution(String str) {
 
         String answer = "";
@@ -24,9 +24,7 @@ public class Main {
 
 // * ASCII 코드 풀이 방법
 
-import java.util.*;
-
-public class Main {
+class MainString4 {
     public static String solution(String str) {
 
         String answer = "";

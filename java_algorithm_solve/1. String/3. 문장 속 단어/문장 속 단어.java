@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class Main {
+class MainString5 {
     public static String solution(String str) {
         String answer = ""; // ? 가장 긴 길이의 단어
         int m = Integer.MIN_VALUE; // ? 가장 작은 수로 초기화
@@ -28,9 +28,7 @@ public class Main {
 
 // * indexOf, substring 풀이
 
-import java.util.*;
-
-public class Main {
+class MainString6 {
     public static String solution(String str) {
         String answer = ""; // ? 가장 긴 길이의 단어
         int m = Integer.MIN_VALUE; // ? 가장 작은 수로 초기화

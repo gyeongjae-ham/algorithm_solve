@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class MainString14 {
     public static Integer solution(String str) {
         str = str.toUpperCase().replaceAll("[A-Z]", "");
         int result = Integer.valueOf(str);

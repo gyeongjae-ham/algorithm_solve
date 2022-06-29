@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class Main {
+class MainString11 {
     public static String solution(String str) {
         String answer = "YES";
         str = str.toUpperCase();
@@ -22,9 +22,7 @@ class Main {
 
 // * 팰린드롬 풀기 - StirngBuilder, equalsIgnoreCase(대소문자 구분없이) 사용
 
-import java.util.*;
-
-class Main {
+class MainString12 {
     public static String solution(String str) {
         String answer = "NO";
         String tmp = new StringBuilder(str).reverse().toString();

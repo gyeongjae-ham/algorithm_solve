@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class Main {
+class MainString7 {
     public static ArrayList<String> solution(int n, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
 
@@ -31,9 +31,7 @@ class Main {
 
 // * 일일히 뒤집는 방법 풀이
 
-import java.util.*;
-
-class Main {
+class MainString8 {
     public static ArrayList<String> solution(int n, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
 

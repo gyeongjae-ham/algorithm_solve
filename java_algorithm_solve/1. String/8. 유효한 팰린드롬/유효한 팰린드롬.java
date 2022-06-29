@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class Main {
+class MainString13 {
     public static String solution(String str) {
         String answer = "NO";
         str = str.toUpperCase().replaceAll("[^A-Z]", "");

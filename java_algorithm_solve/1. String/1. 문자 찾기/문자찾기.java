@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Main {
+class MainString1 {
     public static int solution(String str, char t) {
         int answer=0;
         str = str.toUpperCase();
@@ -23,9 +23,7 @@ public class Main {
 
 // * for 방법
 
-import java.util.Scanner;
-
-public class Main {
+class MainString2 {
     public static int solution(String str, char t) {
         int answer=0;
         str = str.toUpperCase();

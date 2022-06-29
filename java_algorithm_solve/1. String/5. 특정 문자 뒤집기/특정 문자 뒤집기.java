@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class MainString9 {
     public static String solution(String str) {
         String answer;
         char[] s = str.toCharArray();

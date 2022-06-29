@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class MainString10 {
     public static String solution(String str) {
         String answer = "";
         for (int i=0; i<str.length(); i++) {
