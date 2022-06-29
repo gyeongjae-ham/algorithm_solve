@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/백준">
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/1000. A＋B" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/1001. A－B" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/1008. A／B" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/10171. 고양이" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/10172. 개" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/10430. 나머지" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/10718. We love kriii" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/10869. 사칙연산" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/10926. ？？！" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/10998. A×B" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/1330. 두 수 비교하기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/18108. 1998년생인 내가 태국에서는 2541년생？！" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/25083. 새싹" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/2557. Hello World" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/2588. 곱셈" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백준/Bronze/9498. 시험 성적" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
