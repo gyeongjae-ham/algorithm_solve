@@ -2,13 +2,10 @@ import sys
 input = sys.stdin.readline
 
 a = int(input())
-b = int(input())
+b = input()
 
-f = b%10
-s = int(((b%100)-(b%10))/10)
-t = b//100
+f = a*int(b[2])
+s = a*int(b[1])
+t = a*int(b[0])
 
-print(a*f)
-print(a*s)
-print(a*t)
-print(a*b)
+print(f,s,t,a*int(b), sep="\n")
