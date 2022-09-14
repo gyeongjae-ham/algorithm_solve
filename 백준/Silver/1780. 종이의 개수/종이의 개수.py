@@ -1,6 +1,5 @@
 import sys
 input=sys.stdin.readline
-sys.setrecursionlimit(10**8)
 
 N = int(input().rstrip())
 paper = [list(map(int, input().split())) for _ in range(N)]
