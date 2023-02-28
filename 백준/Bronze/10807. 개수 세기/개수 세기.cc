@@ -1,18 +1,19 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int n, v, num;
-vector<int> nums;
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-int main(void){
-    cin>>n;
-    for(int i=0;i<n;i++){
-        cin>>num;
-        nums.push_back(num);
-    }
-    cin>>v;
-    int cnt = count(nums.begin(), nums.end(), v);
-    cout<<cnt;
-    return 0;
+  int N, v, a[201] = {};
+  cin >> N;
+
+  while(N--){
+    int t;
+    cin >> t;
+    a[t+100]++;
+  }
+
+  cin >> v;
+  cout << a[v+100];
 }
