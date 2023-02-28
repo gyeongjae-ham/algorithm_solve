@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int a, b, c;
-int res[11];
-int main() {
-    ios::sync_with_stdio(0), cin.tie(0);
-    cin >> a >> b>> c;
+int num[10];
+
+int main(void) {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
     
-    int mt = a*b*c;
-    string s = to_string(mt);
-    for (auto i : s) {
-        res[i-'0']++;
-    }
-    for (int i=0; i<10; i++) {
-        cout << res[i] << "\n";
-    }
-    return 0;
+  int A, B, C, total;
+  cin >> A >> B >> C;
+  total = A * B * C;
+    
+  while(total > 0) {
+    num[total % 10]++;
+    total /= 10;
+  }
+    
+  for(int i = 0; i < 10; i++) cout << num[i] << "\n";
 }
