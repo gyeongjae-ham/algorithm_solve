@@ -1,22 +1,24 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int a[10];
-string s;
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  
+  int N, a[10] = {}, ans = 0;
+  cin >> N;
+  
+  // 자리수 추출
+  while(N){
+    a[N%10]++;
+    N /= 10;
+  }
 
-int main(void) {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    
-    cin>>s;
-    for(auto c:s){
-        a[c-'0']++;
-    }
-    a[6]=a[9]=(a[6]+a[9]+1) / 2;
-    
-    int mn = *max_element(a, a+10);
-    cout<<mn<<'\n';
-    
-    return 0;
+  for(int i = 0; i < 10; i++){
+    if(i == 6 || i == 9) continue;
+    ans = max(ans, a[i]);
+  }
+  // (a[6]+a[9])/2를 올림한 값이 6, 9에 대한 필요한 세트의 수이므로 (a[6]+a[9]+1)/2을 계산
+  ans = max(ans, (a[6]+a[9]+1)/2);
+  cout << ans;
 }
