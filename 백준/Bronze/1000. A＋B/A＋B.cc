@@ -1,15 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define X first
-#define Y second
 
-int a,b;
+int a, b;
 
 int main(void) {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+    ios::sync_with_stdio(0), cin.tie(0);
     
     cin>>a>>b;
-    cout<<a+b<<"\n";
+    cout<<a+b;
     return 0;
 }
