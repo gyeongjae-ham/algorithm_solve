@@ -170,3 +170,6 @@ db.sqlite3-journal
 docs/_build/
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# VS Code
+.vscode
