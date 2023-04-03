@@ -5,52 +5,24 @@ using namespace std;
 #define X first
 #define Y second
 
-int n;
-int arr[15];
-int num[15];
-bool isused[15];
-
-void func(int k) {
-  if(k==6) {
-    bool flag = true;
-    int tmp = -1;
-    for(int i=0;i<6;i++) {
-      if(tmp > num[arr[i]]) flag = false;
-      tmp = num[arr[i]];
-    }
-    
-    if(flag) {
-      for(int i=0;i<6;i++) {
-        cout<<num[arr[i]]<<' ';
-      }
-      cout<<'\n';
-    }
-    return;
-  }
-  
-  for(int i=0;i<n;i++) {
-    if(!isused[i]) {
-      arr[k] = i;
-      isused[i] = 1;
-      func(k + 1);
-      isused[i] = 0;
-    }
-  }
-}
-
+int k, arr[15], mask[15];
 int main(void) {
   fastio;
-  while(true) {
-    cin>>n;
-    if(n==0) break;
-    for(int i=0;i<n;i++) {
-      cin>>num[i];
-    }
-    sort(num, num+n);
-    func(0);
-    cout<<'\n';
-    fill(num, num+n, 0);
-    fill(arr, arr+n, 0);
+  while (1) {
+    cin >> k;
+    if (!k) break;
+    for (int i = 0; i < k; i++)
+      cin >> arr[i];
+    for (int i = 6; i < k; i++)
+      mask[i] = 1; // 뽑히지 않아야 할 원소를 표시
+    do {
+      for (int i = 0; i < k; i++) {
+        if (!mask[i]) cout << arr[i] << " ";
+      }
+      cout << '\n';
+    } while (next_permutation(mask, mask + k));
+    cout << '\n';
+    fill(arr,arr+k,0);
+    fill(mask, mask+k, 0);
   }
-  return 0;
 }
