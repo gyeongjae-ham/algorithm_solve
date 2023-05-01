@@ -1,10 +1,10 @@
 # [unrated] 주사위 게임 2 - 181930 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181930?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181930?language=cpp) 
 
 ### 성능 요약
 
-메모리: 75.5 MB, 시간: 0.04 ms
+메모리: 4.15 MB, 시간: 0.01 ms
 
 ### 구분
 
