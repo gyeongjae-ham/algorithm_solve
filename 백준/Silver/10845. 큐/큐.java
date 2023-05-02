@@ -7,7 +7,7 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         
         int n = Integer.parseInt(br.readLine());
-        Deque<Integer> q = new LinkedList<>();
+        LinkedList<Integer> q = new LinkedList<>();
         
         for(int i=0; i<n; i++) {
             String[] cmd = br.readLine().split(" ");
