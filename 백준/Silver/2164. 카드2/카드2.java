@@ -7,7 +7,7 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         
         int n = Integer.parseInt(br.readLine());
-        Queue<Integer> q = new LinkedList<>();
+        LinkedList<Integer> q = new LinkedList<>();
         
         for(int i=1; i<=n; i++) q.add(i);
         while(q.size() > 1) {
