@@ -5,17 +5,17 @@ public class Main {
     static final int[] dx = new int[]{1, -1, 0, 0};
     static final int[] dy = new int[]{0, 0, 1, -1};
     static int n;
-    static String[][] gr;
+    static char[][] gr;
     static int[][] vis;
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         n = Integer.parseInt(br.readLine());
-        gr = new String[n][n];
+        gr = new char[n][n];
         vis = new int[n][n];
 
-        for(int i=0; i<n; i++) gr[i] = br.readLine().split("");
+        for(int i=0; i<n; i++) gr[i] = br.readLine().toCharArray();
         
         int fv = area();
         
@@ -23,8 +23,8 @@ public class Main {
         
         for(int i=0; i<n; i++) {
             for(int j=0; j<n; j++) {
-                if(gr[i][j].equals("G")) {
-                    gr[i][j] = "R";
+                if(gr[i][j] == 'G') {
+                    gr[i][j] = 'R';
                 }
             }
         }
@@ -63,7 +63,7 @@ public class Main {
                 int ny = curY + dy[d];
                 
                 if(nx<0 || nx>=n || ny<0 || ny>=n) continue;
-                if(vis[nx][ny] == 1 || !gr[nx][ny].equals(gr[curX][curY])) continue;
+                if(vis[nx][ny] == 1 || gr[nx][ny] != gr[curX][curY]) continue;
                 
                 vis[nx][ny] = 1;
                 q.add(new Node(nx, ny));
