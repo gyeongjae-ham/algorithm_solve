@@ -1,3 +1,3 @@
-# Algorithm, Data Structure
+# Algorithm, 문제 풀이
 
 백준 사이트 문제 자동 업로드 레포지토리
