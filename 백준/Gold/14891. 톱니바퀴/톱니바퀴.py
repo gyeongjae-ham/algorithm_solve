@@ -3,50 +3,44 @@ from collections import deque
 fi = sys.stdin.readline
 sys.setrecursionlimit(10**6)
 
-def go(x, d):
-    dirs = [0] * 4
-    # 해당 톱니바퀴의 회전 방향을 기록하는 리스트
-    dirs[x] = d
-    
-    # 왼쪽으로 회전을 전파하기
-    idx = x
-    # 톱니바퀴 왼쪽 끝까지, 현재 톱니바퀴 왼쪽 날개와 왼쪽 톱니바퀴 오른쪽부분의 극이 다르면 회전방향 반대로 저장
-    while idx > 0 and board[idx][6] != board[idx-1][2]:
-        dirs[idx-1] = -dirs[idx]
-        idx -= 1
-    
-    # 오른쪽으로 회전을 전파하기
-    idx = x
-    # 톱니바퀴 오른쪽 끝까지, 현재 톱니바퀴 오른쪽 날개와 오른쪽 톱니바퀴 왼쪽부분의 극이 다르면 회전방향 반대로 저장
-    while idx < 3 and board[idx][2] != board[idx+1][6]:
-        dirs[idx+1] = -dirs[idx]
-        idx += 1
-    
-    # 각 톱니바퀴의 회전방향대로 돌려주기
-    for i in range(4):
-        if dirs[i] == -1:
-            tmp = board[i][:]
-            board[i] = tmp[1:]
-            board[i].append(tmp[0])
-        if dirs[i] == 1:
-            tmp = board[i][:]
-            board[i] = tmp[:-1]
-            board[i].insert(0, tmp[-1])
+def rotate_right(x, d):
+    # 톱니 바퀴 범위를 넘어서거나, 맞닿은 극이 같으면 return
+    if x > 4 or board[x - 1][2] == board[x][6]: return
+
+    if board[x - 1][2] != board[x][6]:
+        rotate_right(x + 1, -d)
+        board[x].rotate(d)
+        
+def rotate_left(x, d):
+    # 톱니 바퀴 범위를 넘어서거나, 맞닿은 극이 같으면 return
+    if x < 1 or board[x][2] == board[x + 1][6]: return
+
+    if board[x][2] != board[x + 1][6]:
+        rotate_left(x - 1, -d)
+        board[x].rotate(d)
+
     
 def solution():
     global board
-    board = [list(map(int, fi().rstrip())) for _ in range(4)]
+    board = {}
+    for i in range(1, 5):
+        # 돌리기 쉬우려고 deque을 사용했다
+        # 이전 풀이에서 list로 돌리는 것보다 깔끔하다 흠 고려해봐야겠다
+        board[i] = deque(map(int, fi().rstrip()))
+    
     k = int(fi().rstrip())
-        
-    while k > 0:
+    for _ in range(k):
         x, d = map(int, fi().split())
-        go(x-1, d)
-        k -= 1
+        
+        rotate_right(x + 1, -d)
+        rotate_left(x - 1, -d)
+        board[x].rotate(d)
     
     ans = 0
     for i in range(4):
-        if board[i][0] == 1:
+        if board[i+1][0] == 1:
             ans += (1<<i)
+        
     print(ans)
                 
 if __name__ == "__main__":
