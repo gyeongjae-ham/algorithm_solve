@@ -10,20 +10,18 @@ int main() {
   int n,k;
   cin>>n>>k;
   
-  list<int> l;
-  for(int i=1;i<n+1;i++) l.push_back(i);
+  queue<int> Q;
+  for(int i=1;i<n+1;i++) Q.push(i);
   
   cout<<'<';
-  auto p = l.begin();
-  int i = 1;
-  while(!l.empty()) {
-    if(i%k == 0) {
-      cout<<*p;
-      p = l.erase(p);
-      cout<<(l.empty() ? ">" : ", ");
-    } else p++;
-    if(p == l.end()) p = l.begin();
-    i++;
+  while(!Q.empty()) {
+    for(int i=1;i<k;i++) {
+      Q.push(Q.front());
+      Q.pop();
+    }
+    cout<<Q.front();
+    Q.pop();
+    cout<<(Q.empty() ? ">" : ", ");
   }
   
   return 0;
