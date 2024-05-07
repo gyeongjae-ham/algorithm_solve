@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
-#define fi cin.tie(0)->sync_with_stdio(0)
 
 int main() {
-    fi;
-    
-    cout<<"Hello World!";
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout<<"Hello World!";
   
-    return 0;
+  return 0;
 }
