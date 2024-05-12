@@ -1,49 +1,60 @@
-#include <bits/stdc++.h>
-
-#define fi cin.tie(0)->sync_with_stdio(0)
-#define ll long long
+#include <iostream>
+#include <string>
+#include <stack>
 
 using namespace std;
 
 int main() {
-  fi;
-  string str;
-  cin>>str;
-  
-  list<char> L;
-  
-  for(int i=0;i<str.size();i++) {
-    L.push_back(str.at(i));
-  }
-  
-  int N;
-  cin>>N;
-  list<char>::iterator cur = L.end();
-  
-  for(int i=0;i<N;i++) {
-    char c;
-    cin>>c;
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
     
-    if(c=='L') {
-      if(cur!=L.begin()) cur--;
+    string word;
+    cin>>word;
+    
+    int n;
+    cin>>n;
+    
+    stack<char> lst;
+    stack<char> rst;
+    
+    for(auto c: word) lst.push(c);
+    
+    while(n--) {
+        char cmd;
+        cin>>cmd;
+        if(cmd == 'L') {
+            if(!lst.empty()) {
+                rst.push(lst.top());
+                lst.pop();
+            }
+        }
+        else if(cmd == 'D') {
+            if(!rst.empty()) {
+                lst.push(rst.top());
+                rst.pop();
+            }
+        }
+        else if(cmd == 'B') {
+            if(!lst.empty()) {
+                lst.pop();
+            }
+        }
+        else {
+            char nw;
+            cin>>nw;
+            lst.push(nw);
+        }
     }
-    else if(c=='D') {
-      if(cur!=L.end()) cur++;
+    
+    while(!lst.empty()) {
+        rst.push(lst.top());
+        lst.pop();
     }
-    else if(c=='B') {
-      if(cur!=L.begin())
-        cur = L.erase(--cur);
+    
+    while(!rst.empty()) {
+        cout<<rst.top();
+        rst.pop();
     }
-    else if(c=='P') {
-      char s;
-      cin>>s;
-      L.insert(cur, s);
-    }
-  }
-  
-  for(auto it=L.begin();it!=L.end();it++) {
-    cout<<*it;
-  }
-  
-  return 0;
+    
+    return 0;
 }
