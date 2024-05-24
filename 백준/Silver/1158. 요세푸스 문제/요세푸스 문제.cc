@@ -1,28 +1,30 @@
-#include <bits/stdc++.h>
-
-#define fi cin.tie(0)->sync_with_stdio(0)
-#define ll long long
+#include <iostream>
+#include <string>
+#include <queue>
 
 using namespace std;
 
 int main() {
-  fi;
-  int n,k;
-  cin>>n>>k;
-  
-  queue<int> Q;
-  for(int i=1;i<n+1;i++) Q.push(i);
-  
-  cout<<'<';
-  while(!Q.empty()) {
-    for(int i=1;i<k;i++) {
-      Q.push(Q.front());
-      Q.pop();
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    queue<int> q;
+    
+    int a,b;
+    cin>>a>>b;
+    
+    for(int i=1;i<=a;i++) q.push(i);
+
+    cout<<"<";
+    for(int i=0;i<a-1;i++) {
+        for(int j=0;j<b-1; j++) {
+            q.push(q.front());
+            q.pop();
+        }
+        cout<<q.front()<<", ";
+        q.pop();
     }
-    cout<<Q.front();
-    Q.pop();
-    cout<<(Q.empty() ? ">" : ", ");
-  }
-  
-  return 0;
+    cout<<q.front()<<">";
+    
+    return 0;
 }
