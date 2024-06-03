@@ -1,24 +1,22 @@
-#include <bits/stdc++.h>
-
-#define fi cin.tie(0)->sync_with_stdio(0)
-#define ll long long
+#include <iostream>
+#include <string>
 
 using namespace std;
 
+int al[26] = {0,};
 int main() {
-  fi;
-  string s;
-  cin>>s;
-  
-  vector<int> v(26);
-  
-  for (auto c : s) {
-    v[int(c)-97]++;
-  }
-  
-  for (auto c : v) {
-    cout<<c<<" ";
-  }
-  
-  return 0;
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    string word;
+    cin>>word;
+    
+    for (auto c : word) {
+        al[c-'a']++;
+    }
+    
+    for (auto c : al) {
+        cout<<c<<' ';
+    }
+    return 0;
 }
